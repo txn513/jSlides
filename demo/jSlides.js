@@ -1,4 +1,4 @@
-(function ( $ ) {
+;(function ( $ ) {
     $.fn.jSlides = function(options) {
    		return this.each(function(){
 			var mainDiv = $('<div class="main" id="main-temp"></div>');
@@ -11,7 +11,9 @@
 				img3: {h2:'Tranquilent', h3:'COMPATRIOT'},
 				img4: {h2:'Insecure', h3:'HUSSLER'},
 				autoplay: false,
-				time: 3000
+				time: 3000,
+				width: 1280,
+				height: 800
 			}
 			options = $.extend(settings, options);
 			var objNum = Object.getOwnPropertyNames(settings).length;
