@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	padding: 50px 0;
+	background-color:  #fff;
+	font-size: 14px;
+	font-family: 'Avenir Next';
+	color: #555;
+}
+.slider{
+	position: relative;
+	width: 1280px;
+	height: 400px;
+	margin: 0 auto;
+}
+/* main */
+.slider .main {
+	position: relative;
+	width: 1280px;
+	height: 400px;
+	overflow: hidden;
+}
+.slider .main .main-i {
+	position: absolute;
+	opacity: 0;
+	left: -50%;
+	transition: all 1s;
+}
+.slider .main-i .caption {
+	position: absolute;
+	top: 80px;
+	left: 350px;
+}
+.slider .main-i .caption h2,
+.slider .main-i .caption h3 {
+	transition: all 0.8s 1s;
+}
+.slider .main-i .caption h2 {
+	color: #ccc;
+	font-size: 32px;
+	margin-left: 0;
+	margin-bottom: 10px;
+}
+.slider .main-i .caption h3 {
+	font-size: 24px;
+	margin-left: 0px;
+}
+/* ctrl 缩略图 */
+.slider .ctrl {
+	position: absolute;
+	width: 1280px;
+	height: 13px;
+	bottom: -13px;
+	text-align: center;
+}
+.slider .ctrl .ctrl-i{
+	position: relative;
+	display: inline-block;
+	width: 317px;
+	height: 13px;
+	background-color: #888;
+	top: 0;
+	transition: all 0.8s;
+	margin-left: 4px;
+	float: left;
+}
+.slider .ctrl .ctrl-i:first-child {
+	margin-left: 0;
+}
+.slider .ctrl .ctrl-i img{
+	position: absolute;
+	width: 100%;
+	bottom: 13px;
+	left: 0;
+	transition: all 0.8s;
+	opacity: 0;
+}
+.slider .ctrl .ctrl-i:hover {
+	background: #555;
+}
+.slider .ctrl .ctrl-i:hover img {
+	opacity: 1;
+}
+
+/* active 样式*/
+.slider .ctrl .ctrl-active {
+	background: #db7093;
+}
+.slider .ctrl .ctrl-active:hover {
+	background: #db7093;
+}
+.slider .ctrl .ctrl-active:hover img {
+	opacity: 0;
+}
+.slider .main .active {
+	left: 0;
+	opacity: 1;
+}
+.slider .active .caption h2 {
+	margin-left: -35px;
+}
+.slider .active .caption h3 {
+	margin-left: 45px;
+}
+.slider .ctrl .active {
+	background-color: #db7093;
+}

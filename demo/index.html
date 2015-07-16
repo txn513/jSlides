@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>缩略图幻灯片</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	
+
+	<div class="slider">
+		<img src="img/1.jpg">
+		<img src="img/2.jpg">
+		<img src="img/3.jpg">
+		<img src="img/4.jpg">
+	</div>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jSlides.js"></script>
+	<script>
+		$(function(){
+			$('.slider').jSlides();
+		});
+		
+
+		// $(".slider").each(function(){
+		// 	var img = $(this).children('img');
+		// 	alert(img.length);
+		// });
+	</script>
+<!-- 	<script src="slides.js"></script> -->
+
+</body>
+</html>
