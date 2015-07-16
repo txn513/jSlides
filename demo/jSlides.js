@@ -45,8 +45,7 @@
 					var _html_ctrl = $('<div class="ctrl" id="ctrl-temp"><a href="javascript:;" class="ctrl-i" id="ctrl-'
 					+ i +'"></a></div>');
 					_html_ctrl.children('a').append(img[i]);
-					// var _html_ctrl =  ctrl_thumb
-					// 						.replace(/{{index}}/g, i);
+					
 					main_arr.push(_html_main.html());
 					ctrl_arr.push(_html_ctrl.html());
 				}
@@ -60,6 +59,7 @@
 			for(var i=0; i<$('.ctrl-i').length; i++){
 				
 				$('.ctrl-i')[i].onclick = function(){
+					alert(index);
 					j = this.getAttribute('index');
 					switchSlides(j)
 				}
@@ -82,7 +82,7 @@
 		}
 			
 			addSlides();
-			// switchSlides(1);
+			switchSlides(1);
 			fnClick();
 		});
    		
