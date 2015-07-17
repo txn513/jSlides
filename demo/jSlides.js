@@ -43,7 +43,7 @@
 					+ '<h3>'+ data[i].h3 +'</h3></div>');
 
 					var _html_ctrl = $('<div class="ctrl" id="ctrl-temp"><a href="javascript:;" class="ctrl-i" id="ctrl-'
-					+ i +'"></a></div>');
+					+ i +'" index="'+ i +'"></a></div>');
 					_html_ctrl.children('a').append(img[i]);
 					
 					main_arr.push(_html_main.html());
@@ -59,7 +59,6 @@
 			for(var i=0; i<$('.ctrl-i').length; i++){
 				
 				$('.ctrl-i')[i].onclick = function(){
-					alert(index);
 					j = this.getAttribute('index');
 					switchSlides(j)
 				}
