@@ -108,6 +108,7 @@
 					'width': settings.width+'px',
 					'height': settings.height+'px'
 				});
+				$('.slider .ctrl').css('width',settings.width+'px');
 			}
 			// 执行插件
 			_addSlides();

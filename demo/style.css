@@ -53,7 +53,7 @@ body {
 /* ctrl 缩略图 */
 .slider .ctrl {
 	position: absolute;
-	width: 600px;
+	/*width: 600px;*/
 	height: 13px;
 	bottom: -13px;
 	text-align: center;
