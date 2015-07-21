@@ -11,22 +11,25 @@ body {
 }
 .slider{
 	position: relative;
-	width: 1280px;
-	height: 400px;
+	/*width: 600px;
+	height: 400px;*/
 	margin: 0 auto;
 }
 /* main */
 .slider .main {
 	position: relative;
-	width: 1280px;
-	height: 400px;
+	/*width: 600px;
+	height: 400px;*/
 	overflow: hidden;
 }
 .slider .main .main-i {
 	position: absolute;
 	opacity: 0;
-	left: -50%;
+	/*left: 0;*/
 	transition: all 1s;
+}
+.slider .main img {
+	/*height: 400px*/
 }
 .slider .main-i .caption {
 	position: absolute;
@@ -50,7 +53,7 @@ body {
 /* ctrl 缩略图 */
 .slider .ctrl {
 	position: absolute;
-	width: 1280px;
+	width: 600px;
 	height: 13px;
 	bottom: -13px;
 	text-align: center;
@@ -58,7 +61,7 @@ body {
 .slider .ctrl .ctrl-i{
 	position: relative;
 	display: inline-block;
-	width: 317px;
+	width: 147px;
 	height: 13px;
 	background-color: #888;
 	top: 0;
@@ -95,7 +98,7 @@ body {
 	opacity: 0;
 }
 .slider .main .active {
-	left: 0;
+	/*left: -40%;*/
 	opacity: 1;
 }
 .slider .active .caption h2 {

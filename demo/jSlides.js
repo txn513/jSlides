@@ -12,9 +12,11 @@
 				img4: {h2:'Insecure', h3:'HUSSLER'},
 				autoplay: false,
 				time: 3000,
-				width: 1280,
-				height: 800
+				width: 600,
+				height: 400
 			}
+			// $(img[0]).css('height', '400px');
+			// alert($(img[0]).css('width'));
 			options = $.extend(settings, options);
 			var objNum = Object.getOwnPropertyNames(settings).length;
 			
@@ -78,6 +80,7 @@
 				}
 				main.className += " active";
 				ctrl.className += " active";
+				_setPosition();
 			}
 			var _autoPlay = function(){
 				var i = 0;
@@ -90,7 +93,25 @@
 					}
 				}, settings.time);
 			}
+			var _setPosition = function(){
+				$('.slider .main img').css('height',settings.height+'px');
+				var imgWidth = parseInt($('.slider .main img').css('width'));
+				$('.slider .main .main-i').css('left',(-(imgWidth-settings.width)/2)*2+'px');
+				$('.slider .main .active').css('left', (-(imgWidth-settings.width)/2)+'px');
+			}
+			var _setSize = function(){
+				$('.slider').css({
+					'width': settings.width+'px',
+					'height': settings.height+'px'
+				});
+				$('.slider .main').css({
+					'width': settings.width+'px',
+					'height': settings.height+'px'
+				});
+			}
+			// 执行插件
 			_addSlides();
+			_setSize();
 			_switchSlides(0);
 			_fnClick();
 			if(options.autoplay){
