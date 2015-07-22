@@ -1,18 +1,20 @@
 (function ( $ ) {
-    $.fn.jSlides = function() {
+    $.fn.jSlides = function(options) {
    		return this.each(function(){
 			var mainDiv = $('<div class="main" id="main-temp"></div>');
 			// var singleDiv = $('<div class="main-i" id="main-{{index}}"></div>');
 			var ctrlDiv = $('<div class="ctrl" id="ctrl-temp"></div>');
 			var img = $(this).find('img');
-			// singleDiv.append('<div class="caption">'
-			// 	+ '<h2>{{h2}}</h2>'
-			// 	+ '<h3>{{h3}}</h3></div>'
-			// 	);
-			// mainDiv.append(singleDiv);
-			// ctrlDiv.append('<a href="#" '
-			// 	+'class="ctrl-i" id="ctrl-{{index}}" index="{{index}}"><img src="img/{{index}}.jpg"></a>')
-
+			var settings = {
+				img1: {h2:'Creative', h3:'DUET'},
+				img2: {h2:'Friendly', h3:'DEVIL'},
+				img3: {h2:'Tranquilent', h3:'COMPATRIOT'},
+				img4: {h2:'Insecure', h3:'HUSSLER'},
+				img5: {h2:'Tranquilent', h3:'COMPATRIOT'}
+			}
+			var objNum = Object.getOwnPropertyNames(settings).length;
+			// $.extend(settings, options);
+			
 			$(this).append(mainDiv).append(ctrlDiv);
 
 			function g(id){
