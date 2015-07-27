@@ -61,7 +61,7 @@ body {
 .slider .ctrl .ctrl-i{
 	position: relative;
 	display: inline-block;
-	width: 147px;
+	/*width: 147px;*/
 	height: 13px;
 	background-color: #888;
 	top: 0;

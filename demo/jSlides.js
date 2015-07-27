@@ -109,6 +109,7 @@
 					'height': settings.height+'px'
 				});
 				$('.slider .ctrl').css('width',settings.width+'px');
+				$('.slider .ctrl .ctrl-i').css('width',(settings.width-4*(img.length-1))/img.length + 'px');
 			}
 			// 执行插件
 			_addSlides();
