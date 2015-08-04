@@ -2,13 +2,13 @@
 	margin: 0;
 	padding: 0;
 }
-body {
+/*body {
 	padding: 50px 0;
 	background-color:  #fff;
 	font-size: 14px;
 	font-family: 'Avenir Next';
 	color: #555;
-}
+}*/
 .slider{
 	position: relative;
 	/*width: 600px;

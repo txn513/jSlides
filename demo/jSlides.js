@@ -12,8 +12,8 @@
 				img4: {h2:'Insecure', h3:'HUSSLER'},
 				autoplay: false,
 				time: 3000,
-				width: 600,
-				height: 400
+				width: 1280,
+				height: 500
 			}
 			// $(img[0]).css('height', '400px');
 			// alert($(img[0]).css('width'));
@@ -91,25 +91,25 @@
 					}else{
 						i++;
 					}
-				}, settings.time);
+				}, options.time);
 			}
 			var _setPosition = function(){
-				$('.slider .main img').css('height',settings.height+'px');
+				$('.slider .main img').css('height',options.height+'px');
 				var imgWidth = parseInt($('.slider .main img').css('width'));
-				$('.slider .main .main-i').css('left',(-(imgWidth-settings.width)/2)*2+'px');
-				$('.slider .main .active').css('left', (-(imgWidth-settings.width)/2)+'px');
+				$('.slider .main .main-i').css('left',((-(imgWidth-options.width)/2) - options.width/2)+'px');
+				$('.slider .main .active').css('left', (-(imgWidth-options.width)/2)+'px');
 			}
 			var _setSize = function(){
 				$('.slider').css({
-					'width': settings.width+'px',
-					'height': settings.height+'px'
+					'width': options.width+'px',
+					'height': options.height+'px'
 				});
 				$('.slider .main').css({
-					'width': settings.width+'px',
-					'height': settings.height+'px'
+					'width': options.width+'px',
+					'height': options.height+'px'
 				});
-				$('.slider .ctrl').css('width',settings.width+'px');
-				$('.slider .ctrl .ctrl-i').css('width',(settings.width-4*(img.length-1))/img.length + 'px');
+				$('.slider .ctrl').css('width',options.width+'px');
+				$('.slider .ctrl .ctrl-i').css('width',(options.width-4*(img.length-1))/img.length + 'px');
 			}
 			// 执行插件
 			_addSlides();
