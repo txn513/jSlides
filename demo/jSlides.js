@@ -5,6 +5,7 @@
 			// var singleDiv = $('<div class="main-i" id="main-{{index}}"></div>');
 			var ctrlDiv = $('<div class="ctrl" id="ctrl-temp"></div>');
 			var img = $(this).find('img');
+			//default settings
 			var settings = {
 				img1: {h2:'Creative', h3:'DUET'},
 				img2: {h2:'Friendly', h3:'DEVIL'},
@@ -15,8 +16,7 @@
 				width: 1280,
 				height: 500
 			}
-			// $(img[0]).css('height', '400px');
-			// alert($(img[0]).css('width'));
+			
 			options = $.extend(settings, options);
 			var objNum = Object.getOwnPropertyNames(settings).length;
 			
@@ -93,12 +93,16 @@
 					}
 				}, options.time);
 			}
+
+			//set sliders and active slider position
 			var _setPosition = function(){
 				$('.slider .main img').css('height',options.height+'px');
 				var imgWidth = parseInt($('.slider .main img').css('width'));
 				$('.slider .main .main-i').css('left',((-(imgWidth-options.width)/2) - options.width/2)+'px');
 				$('.slider .main .active').css('left', (-(imgWidth-options.width)/2)+'px');
 			}
+
+			//set slider width&height and control width$height
 			var _setSize = function(){
 				$('.slider').css({
 					'width': options.width+'px',
