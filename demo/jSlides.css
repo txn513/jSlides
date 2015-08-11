@@ -1,7 +1,7 @@
-* {
+/** {
 	margin: 0;
 	padding: 0;
-}
+}*/
 /*body {
 	padding: 50px 0;
 	background-color:  #fff;
@@ -43,27 +43,25 @@
 	font-size: 24px; margin-left: 0px;
 }*/
 /* ctrl 缩略图 */
-.slider .ctrl {
+/*.slider .ctrl {
 	position: absolute;
-	/*width: 600px;*/
 	height: 13px;
 	bottom: -13px;
 	text-align: center;
-}
-.slider .ctrl .ctrl-i{
+}*/
+/*.slider .ctrl .ctrl-i{
 	position: relative;
 	display: inline-block;
-	/*width: 147px;*/
 	height: 13px;
 	background-color: #888;
 	top: 0;
 	transition: all 0.8s;
 	margin-left: 4px;
 	float: left;
-}
-.slider .ctrl .ctrl-i:first-child {
+}*/
+/*.slider .ctrl .ctrl-i:first-child {
 	margin-left: 0;
-}
+}*/
 .slider .ctrl .ctrl-i img{
 	position: absolute;
 	width: 100%;
@@ -80,25 +78,25 @@
 }
 
 /* active 样式*/
-.slider .ctrl .ctrl-active {
+/*.slider .ctrl .ctrl-active {
 	background: #db7093;
-}
-.slider .ctrl .ctrl-active:hover {
+}*/
+/*.slider .ctrl .ctrl-active:hover {
 	background: #db7093;
 }
 .slider .ctrl .ctrl-active:hover img {
 	opacity: 0;
-}
+}*/
 /*.slider .main .active {
 	left: -40%;
 	opacity: 1;
 }*/
-.slider .active .caption h2 {
+/*.slider .active .caption h2 {
 	margin-left: -35px;
-}
-.slider .active .caption h3 {
+}*/
+/*.slider .active .caption h3 {
 	margin-left: 45px;
-}
-.slider .ctrl .active {
+}*/
+/*.slider .ctrl .active {
 	background-color: #db7093;
-}
+}*/

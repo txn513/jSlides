@@ -18,7 +18,7 @@
 			}
 			
 			options = $.extend(settings, options);
-			var objNum = Object.getOwnPropertyNames(settings).length;
+			//var objNum = Object.getOwnPropertyNames(settings).length;
 			
 			$(this).append(mainDiv).append(ctrlDiv);
 
@@ -47,8 +47,12 @@
 					+ '<h3 style="transition: all 0.8s 1s; font-size: 24px; margin-left: 0px;">'
 					+ options['img'+(i+1)].h3 +'</h3></div>');
 
-					var _html_ctrl = $('<div class="ctrl" id="ctrl-temp"><a href="javascript:;" class="ctrl-i" id="ctrl-'
-					+ i +'" index="'+ i +'"></a></div>');
+					var _html_ctrl = $('<div class="ctrl" id="ctrl-temp" style="position: absolute; ' 
+					+ 'height: 13px; bottom: -13px; text-align: center;">' 
+					+ '<a href="javascript:;" class="ctrl-i" id="ctrl-'
+					+ i +'" index="'+ i +'" style="position: relative; display: inline-block; ' 
+					+ 'height: 13px; background-color: #888; top: 0; transition: all 0.8s; ' 
+					+ 'margin-left: 4px; float: left;"></a></div>');
 					_html_ctrl.children('a').append(img[i]);
 					
 					main_arr.push(_html_main.html());
@@ -72,20 +76,28 @@
 				}
 			}
 			var _switchSlides = function(n){
-				var main= _g('main-'+n);
-				var ctrl= _g('ctrl-'+n);
+				var main= $('#main-'+n);
+				var ctrl= $('#ctrl-'+n);
 				
-				var clear_main = _g('.main-i');
-				var clear_ctrl = _g('.ctrl-i');
+				var clear_main = $('.main-i');
+				var clear_ctrl = $('.ctrl-i');
 
-				for(var i = 0; i < clear_main.length; i++){
+				clear_main.each(function(){
+					$(this).removeClass('active').css('opacity', 0);
+				});
+
+				clear_ctrl.each(function(){
+					$(this).removeClass('active').css('background-color','#888');;
+				});
+				// for(var i = 0; i < clear_main.length; i++){
 					
-					clear_main[i].className = "main-i";
-					clear_ctrl[i].className = "ctrl-i";
-				}
-				main.className += " active";
-				ctrl.className += " active";
+				// 	$(clear_main[i]).removeClass('active');
+				// 	$(clear_ctrl[i]).removeClass('active');
+				// }
+				main.addClass('active');
+				ctrl.addClass('active');
 				_setPosition();
+				_setActiveStyle();
 			}
 			var _autoPlay = function(){
 				var i = 0;
@@ -105,12 +117,26 @@
 				var imgWidth = parseInt($('.slider .main img').css('width'));
 				$('.slider .main .main-i').css('left',((-(imgWidth-options.width)/2) - options.width/2)+'px');
 				$('.slider .main .active').css({
-					'left': (-(imgWidth-options.width)/2)+'px',
-					'opacity': 1
+					'left': (-(imgWidth-options.width)/2)+'px'
 				});
 			}
 
-			//set slider width&height and control width$height
+			var _setActiveStyle = function(){
+				$('.slider .main .active').css({
+					'opacity': 1
+				});
+				$('.slider .active .caption h2').css({
+					'margin-left': '-35px'
+				});
+				$('.slider .active .caption h3').css({
+					'margin-left': '45px'
+				});
+				$('.slider .ctrl .active').css({
+					'background': '#db7093'
+				});
+			}
+
+			//set slider width&height and control width&height
 			var _setSize = function(){
 				$('.slider').css({
 					'width': options.width+'px',
@@ -134,7 +160,9 @@
 					'position': 'relative',
 					'overflow': 'hidden'
 				});
-				
+				$('.slider .ctrl .ctrl-i:first').css({
+					'margin-left': 0
+				});
 			}
 			// 执行插件
 			_addSlides();
