@@ -53,6 +53,8 @@
 				}
 				$('#main-temp').html(main_arr.join(''));
 				$('#ctrl-temp').html(ctrl_arr.join(''));
+
+				_setStyle();
 			
 			}
 
@@ -114,6 +116,18 @@
 				});
 				$('.slider .ctrl').css('width',options.width+'px');
 				$('.slider .ctrl .ctrl-i').css('width',(options.width-4*(img.length-1))/img.length + 'px');
+			}
+
+			var _setStyle = function(){
+				//.slider
+				$('.slider').css({
+					'position': 'relative',
+					'margin': '0 auto'
+				});
+				$('.slider .main').css({
+					'position': 'relative',
+					'overflow': 'hidden'
+				});
 			}
 			// 执行插件
 			_addSlides();

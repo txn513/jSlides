@@ -10,17 +10,17 @@
 	color: #555;
 }*/
 .slider{
-	position: relative;
-	/*width: 600px;
-	height: 400px;*/
-	margin: 0 auto;
+	/*position: relative;
+	width: 600px;
+	height: 400px;
+	margin: 0 auto;*/
 }
 /* main */
 .slider .main {
-	position: relative;
-	/*width: 600px;
-	height: 400px;*/
-	overflow: hidden;
+	/*position: relative;
+	width: 600px;
+	height: 400px;
+	overflow: hidden;*/
 }
 .slider .main .main-i {
 	position: absolute;

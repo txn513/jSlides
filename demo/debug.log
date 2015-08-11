@@ -1,0 +1,21 @@
+[0410/151614:ERROR:process_reader_win.cc(141)] SuspendThread: 拒绝访问。 (0x5)
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x1210000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6ffa5a84 of 35 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(154)] could not read debug directory from C:\WINDOWS\SYSTEM32\fwbase.dll
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x70060000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\WINDOWS\SYSTEM32\DAVHLPR.DLL
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x742f0000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74080000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\WINDOWS\SYSTEM32\Secur32.dll
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x65960000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\49.0.2623.110\chrome_child.dll
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x602a0000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\360\360safe\360verify.dll
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6df90000 of 64 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\WINDOWS\SYSTEM32\dwrite.dll
+[0410/151614:ERROR:process_reader_win.cc(232)] ReadMemory at 0x12bc154 of 12 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0410/151614:WARNING:process_snapshot_win.cc(89)] ReadMemory ExceptionInformation failed
+[0410/151614:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::InitializeException failed
+[0410/151614:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess, ntstatus=-1073741558
