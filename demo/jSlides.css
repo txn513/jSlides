@@ -22,34 +22,26 @@
 	height: 400px;
 	overflow: hidden;*/
 }
-.slider .main .main-i {
+/*.slider .main .main-i {
 	position: absolute;
-	opacity: 0;
-	/*left: 0;*/
-	transition: all 1s;
-}
+	opacity: 0; transition: all 1s;
+}*/
 .slider .main img {
 	/*height: 400px*/
 }
-.slider .main-i .caption {
-	position: absolute;
-	top: 80px;
-	left: 350px;
-}
-.slider .main-i .caption h2,
+/*.slider .main-i .caption {
+	position: absolute; top: 80px; left: 350px;
+}*/
+/*.slider .main-i .caption h2,
 .slider .main-i .caption h3 {
 	transition: all 0.8s 1s;
-}
-.slider .main-i .caption h2 {
-	color: #ccc;
-	font-size: 32px;
-	margin-left: 0;
-	margin-bottom: 10px;
-}
-.slider .main-i .caption h3 {
-	font-size: 24px;
-	margin-left: 0px;
-}
+}*/
+/*.slider .main-i .caption h2 {
+	color: #ccc; font-size: 32px; margin-left: 0; margin-bottom: 10px;
+}*/
+/*.slider .main-i .caption h3 {
+	font-size: 24px; margin-left: 0px;
+}*/
 /* ctrl 缩略图 */
 .slider .ctrl {
 	position: absolute;
@@ -97,10 +89,10 @@
 .slider .ctrl .ctrl-active:hover img {
 	opacity: 0;
 }
-.slider .main .active {
-	/*left: -40%;*/
+/*.slider .main .active {
+	left: -40%;
 	opacity: 1;
-}
+}*/
 .slider .active .caption h2 {
 	margin-left: -35px;
 }

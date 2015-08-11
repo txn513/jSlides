@@ -38,11 +38,14 @@
 				for(var i=0; i<img.length; i++) {
 					
 					var _html_main = $('<div class="main" id="main-temp"></div>');
-					_html_main.append('<div class="main-i" id="main-'+ i +'"></div>');
+					_html_main.append('<div class="main-i" id="main-'+ i +'" style="position: absolute; '
+						+'opacity: 0; transition: all 1s;"></div>');
 					_html_main.children('.main-i').append($(img[i]).clone(true))
-					.append('<div class="caption">'
-					+ '<h2>'+ options['img'+(i+1)].h2 +'</h2>'
-					+ '<h3>'+ options['img'+(i+1)].h3 +'</h3></div>');
+					.append('<div class="caption" style="position: absolute; top: 80px; left: 350px;">'
+					+ '<h2 style="transition: all 0.8s 1s; color: #ccc; font-size: 32px; '
+					+ 'margin-left: 0; margin-bottom: 10px;">'+ options['img'+(i+1)].h2 + '</h2>'
+					+ '<h3 style="transition: all 0.8s 1s; font-size: 24px; margin-left: 0px;">'
+					+ options['img'+(i+1)].h3 +'</h3></div>');
 
 					var _html_ctrl = $('<div class="ctrl" id="ctrl-temp"><a href="javascript:;" class="ctrl-i" id="ctrl-'
 					+ i +'" index="'+ i +'"></a></div>');
@@ -101,7 +104,10 @@
 				$('.slider .main img').css('height',options.height+'px');
 				var imgWidth = parseInt($('.slider .main img').css('width'));
 				$('.slider .main .main-i').css('left',((-(imgWidth-options.width)/2) - options.width/2)+'px');
-				$('.slider .main .active').css('left', (-(imgWidth-options.width)/2)+'px');
+				$('.slider .main .active').css({
+					'left': (-(imgWidth-options.width)/2)+'px',
+					'opacity': 1
+				});
 			}
 
 			//set slider width&height and control width$height
@@ -128,6 +134,7 @@
 					'position': 'relative',
 					'overflow': 'hidden'
 				});
+				
 			}
 			// 执行插件
 			_addSlides();
