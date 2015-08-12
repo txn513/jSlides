@@ -163,6 +163,31 @@
 				$('.slider .ctrl .ctrl-i:first').css({
 					'margin-left': 0
 				});
+				$('.slider .ctrl .ctrl-i img').css({
+					'position': 'absolute',
+					'width': '100%',
+					'bottom': '13px',
+					'left': 0,
+					'transition': 'all 0.8s',
+					'opacity': 0
+				});
+				$('.slider .ctrl .ctrl-i').hover(function(){
+					$(this).children('img').css('opacity', 1);
+				}, function(){
+					$(this).children('img').css('opacity', 0);
+				});
+
+				$('.slider .ctrl .ctrl-i').hover(function(){
+					$(this).css('background-color', '#555');
+				}, function(){
+					$(this).css('background-color', '#888');
+				})
+
+
+
+
+				
+
 			}
 			// 执行插件
 			_addSlides();
