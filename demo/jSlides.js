@@ -187,6 +187,8 @@
 					$(this).css('background-color', '#888');
 				})
 			}
+
+			
 			// 执行插件
 			_addSlides();
 			_setSize();
