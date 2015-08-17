@@ -1,0 +1,24 @@
+{
+  "name": "jslides",
+  "version": "1.0.0",
+  "description": "a jquery plugin to make css3 sliders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txn513/jSlides.git"
+  },
+  "keywords": [
+    "jquery",
+    "plugin",
+    "slider"
+  ],
+  "author": "Xuning Tian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/txn513/jSlides/issues"
+  },
+  "homepage": "https://github.com/txn513/jSlides#readme"
+}
