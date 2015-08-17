@@ -185,6 +185,7 @@
 					$(this).css('background-color', '#555');
 				}, function(){
 					$(this).css('background-color', '#888');
+					$('.slider .ctrl .ctrl-i.active').css('background-color', '#db7093');
 				})
 			}
 
