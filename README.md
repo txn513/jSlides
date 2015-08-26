@@ -1,6 +1,6 @@
 jSlides
 ========
 
-A jQuery Plugin to make css3 sliders
+A jQuery Plugin to make css3 slides
 
-Documentation: 
+Documentation: [Link](http://www.tianxuning.com/plugin/jSlides/index.html)
