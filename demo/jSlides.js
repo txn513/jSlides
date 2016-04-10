@@ -75,6 +75,7 @@
 					}
 				}
 			}
+
 			var _switchSlides = function(n){
 				var main= $('#main-'+n);
 				var ctrl= $('#ctrl-'+n);
@@ -99,6 +100,7 @@
 				_setPosition();
 				_setActiveStyle();
 			}
+
 			var _autoPlay = function(){
 				var i = 0;
 				setInterval(function(){
@@ -121,6 +123,7 @@
 				});
 			}
 
+			//set active element styles
 			var _setActiveStyle = function(){
 				$('.slider .main .active').css({
 					'opacity': 1
@@ -150,6 +153,7 @@
 				$('.slider .ctrl .ctrl-i').css('width',(options.width-4*(img.length-1))/img.length + 'px');
 			}
 
+			// set basic styles
 			var _setStyle = function(){
 				//.slider
 				$('.slider').css({
@@ -182,12 +186,6 @@
 				}, function(){
 					$(this).css('background-color', '#888');
 				})
-
-
-
-
-				
-
 			}
 			// 执行插件
 			_addSlides();
