@@ -61,7 +61,9 @@
 				$('#main-temp').html(main_arr.join(''));
 				$('#ctrl-temp').html(ctrl_arr.join(''));
 
+				_setSize();
 				_setStyle();
+				
 			
 			}
 
@@ -97,6 +99,7 @@
 				// }
 				main.addClass('active');
 				ctrl.addClass('active');
+
 				_setPosition();
 				_setActiveStyle();
 			}
@@ -115,11 +118,19 @@
 
 			//set sliders and active slider position
 			var _setPosition = function(){
-				$('.slider .main img').css('height',options.height+'px');
-				var imgWidth = parseInt($('.slider .main img').css('width'));
-				$('.slider .main .main-i').css('left',((-(imgWidth-options.width)/2) - options.width/2)+'px');
-				$('.slider .main .active').css({
-					'left': (-(imgWidth-options.width)/2)+'px'
+				var position = function(){
+					$('.slider .main img').css('height',options.height+'px');
+					var imgWidth = parseInt($('.slider .main img').css('width'));
+					// alert(imgWidth);
+					// alert(options.width);
+					$('.slider .main .main-i').css('left',((-(imgWidth-options.width)/2) - options.width/2)+'px');
+					$('.slider .main .active').css({
+						'left': (-(imgWidth-options.width)/2)+'px'
+					});
+				}
+				position();
+				$('.slider .main img').load(function(){
+					position();
 				});
 			}
 
@@ -192,7 +203,6 @@
 			
 			// 执行插件
 			_addSlides();
-			_setSize();
 			_switchSlides(0);
 			_fnClick();
 			if(options.autoplay){
